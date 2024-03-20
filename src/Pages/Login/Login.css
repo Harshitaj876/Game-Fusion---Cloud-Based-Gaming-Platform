@@ -1,0 +1,20 @@
+.Login{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+.loginform{
+    display: flex;
+    flex-direction: column;
+}
+
+.LoginText{
+    background: var(--gradient-color);
+    -webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+    background-clip: text;
+}
