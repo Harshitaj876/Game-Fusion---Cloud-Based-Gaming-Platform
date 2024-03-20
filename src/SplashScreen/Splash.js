@@ -18,8 +18,8 @@ const Splash = () => {
 
   return (
     <div className='splash'>
-        <img src={Logo} alt="Logo" />
-        {showName && <h1 className='Text'>Game Fusion</h1>}
+        <img src={Logo} alt="Logo" className={showName ? 'logo-anim' : ''}/>
+        {showName && <h1 className="name-anim">Game Fusion</h1>}
     </div>
   )
 }
