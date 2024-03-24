@@ -43,6 +43,8 @@ const Home = () => {
         {user && <button onClick={handleLogout}>Logout</button>}
       </div>
 
+      <br/><br/><br/>
+      {!user && <h2>Login Please</h2>}
     </div>
   );
 }
