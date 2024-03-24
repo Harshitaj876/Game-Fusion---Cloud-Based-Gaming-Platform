@@ -1,35 +1,48 @@
-import React from 'react';
-import { Link, Navigate } from 'react-router-dom';
-import { signOut } from 'firebase/auth';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../../Firebase';
 
-const Home = (props) => {
+const Home = () => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
-        window.location.reload(Navigate("/login"));
+        setUser(null); // Reset user state upon logout
+        // Redirect or perform any other actions after logout
+        // For example, you can redirect the user to the login page
       })
       .catch((error) => {
         console.error('Error signing out: ', error);
       });
   };
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div>
       <div>
-        <h1><Link to="/login">Login</Link></h1><br/>
-        <h1><Link to="/signup">SignUp</Link></h1><br/>
+        {!user ? (
+          <h1><Link to="/login">Login</Link></h1>
+        ) : (
+          <h2>Welcome - {user.displayName}</h2>
+        )}
+        {user && <button onClick={handleLogout}>Logout</button>}
       </div>
 
-      <br/><br/><br/>
-      {props.name ? (
-        <>
-          <h2>Welcome - {props.name}</h2>
-          <button onClick={handleLogout}>Logout</button>
-        </>
-      ) : (
-        <h2>Login Please</h2>
-      )}
     </div>
   );
 }

@@ -62,7 +62,6 @@ const Login = () => {
           onChange={event=>setValues(prev=>({...prev,pass: event.target.value}))}
         />
         <div className='space'>
-            Forgot Password?
             <b className='errormsg'>{errorMsg}</b>
             <button onClick={handleSubmission} disabled ={submitButtonDisabled}>Login</button>
         </div>
