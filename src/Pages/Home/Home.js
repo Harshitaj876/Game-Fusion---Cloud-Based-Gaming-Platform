@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../Firebase';
 
@@ -7,9 +7,7 @@ const Home = (props) => {
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
-        // Redirect or perform any other actions after logout
-        // For example, you can redirect the user to the login page
-        window.location.reload(); // Reload the page to reflect changes
+        window.location.reload(Navigate("/login"));
       })
       .catch((error) => {
         console.error('Error signing out: ', error);
