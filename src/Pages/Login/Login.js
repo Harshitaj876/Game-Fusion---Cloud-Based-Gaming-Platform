@@ -1,18 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FrontImage from '../../Assets/LoginImage.png'
 import Logo from '../../Assets/Logo.png'
 import '../Login/Login.css'
 import Discord from '../../Assets/discord.png'
 import Google from '../../Assets/google.png'
+import InputControl from '../../InputControls/InputControl'
+import { Link, useNavigate } from 'react-router-dom'
+import {signInWithEmailAndPassword} from 'firebase/auth';
+import {auth} from '../../Firebase'
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [values, setValues] = useState({
+    email: " ",
+    pass: " ",
+  });
+
+  const [errorMsg, setErrorMsg] = useState("");
+  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+
+  const handleSubmission = () =>{
+    if(!values.email && !values.pass){
+      setErrorMsg("Fill all fields");
+      return;
+    }
+    setErrorMsg("");
+
+    setSubmitButtonDisabled(true);
+    signInWithEmailAndPassword(auth,values.email,values.pass).then(async(res)=>{
+      setSubmitButtonDisabled(false);
+      navigate("/");
+    }).catch((err) =>{ 
+      setSubmitButtonDisabled(false);
+      setErrorMsg(err.message)});
+  }
 
   return (
     <div className='Login'>
       <div className='form'>
         <div className='LogoSection'>
           <img src={Logo} alt='logo'></img>
-          <h1>Login</h1>
+          <h1>LOGIN</h1>
         </div>
         <div className='Options'>
           <div className='buttons'>
@@ -27,13 +55,20 @@ const Login = () => {
 
         </div>
         <div className='Inputs'>
-          <input type="text" id="Username" name="Username" placeholder="Username"></input>
-          <input type="Password" id="Password" name="Password" placeholder="Password"></input>
-          <div className='space'>
+        <InputControl placeholder="Email address"
+          onChange={event=>setValues(prev=>({...prev,email: event.target.value}))}
+        />
+        <InputControl placeholder="Password"
+          onChange={event=>setValues(prev=>({...prev,pass: event.target.value}))}
+        />
+        <div className='space'>
             Forgot Password?
-            <button>Login</button>
+            <b className='errormsg'>{errorMsg}</b>
+            <button onClick={handleSubmission} disabled ={submitButtonDisabled}>Login</button>
+        </div>
+          <div className='signup'>
+          <Link to="/signup" className='normal'>Create account</Link>
           </div>
-          <button className='normal'>Create account</button>
         </div>
       </div>
       <img src={FrontImage} alt='frontImage'></img>

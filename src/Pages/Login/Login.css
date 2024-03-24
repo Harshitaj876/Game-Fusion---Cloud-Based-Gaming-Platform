@@ -97,6 +97,7 @@ input[type=text], select {
     border: none;
     cursor: pointer;
     color: #D0A5D7;
+    text-decoration: none;
 }
 
 input[type=password], select {
@@ -108,6 +109,19 @@ input[type=password], select {
     box-sizing: border-box;
 }
 
+input[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #2C232F ;
+    border-radius: 4px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.signup{
+    display: flex;
+    justify-content: center;
+}
 
 .space{
     display: flex;
@@ -126,4 +140,8 @@ input[type=password], select {
     font-size: 20px;
     font-weight: 500;
     padding: 10px 20px 10px 20px;
+}
+
+.errormsg{
+    color: #fff;
 }
