@@ -36,11 +36,12 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    
       <div>
-      <NavBar/>
+      
         {isLoaded ? (
-          
+          <BrowserRouter>
+          <NavBar/>
           <Routes>
             <Route path='/' element={<Home name = {userName}/>} />
             <Route path='/trending' element= {<Trending/>}/>
@@ -53,11 +54,11 @@ function App() {
             <Route path='login' element= {<Login/>}/>
             <Route path='signup' element= {<SignUp/>}/>
           </Routes>
+          </BrowserRouter>
         ) : (
           <Splash />
         )}
       </div>
-    </BrowserRouter>
   );
 }
 
