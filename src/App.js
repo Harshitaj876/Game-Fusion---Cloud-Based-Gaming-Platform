@@ -36,7 +36,6 @@ function App() {
 
 
   return (
-    
       <div className='layout'>
         {isLoaded ? (
           <BrowserRouter>
@@ -44,14 +43,14 @@ function App() {
           <Routes>
             <Route path='/' element={<Home name = {userName}/>} />
             <Route path='/trending' element= {<Trending/>}/>
-            <Route path='gamescategory' element= {<GamesCategory/>}/>
-            <Route path='esports' element= {<Esports/>}/>
-            <Route path='downloadapp' element= {<DownloadApp/>}/>
-            <Route path='streams' element= {<Streams/>}/>
-            <Route path='settings' element= {<Settings/>}/>
-            <Route path='help&support' element= {<Helpsupport/>}/>
-            <Route path='login' element= {<Login/>}/>
-            <Route path='signup' element= {<SignUp/>}/>
+            <Route path='/gamescategory' element= {<GamesCategory/>}/>
+            <Route path='/esports' element= {<Esports/>}/>
+            <Route path='/downloadapp' element= {<DownloadApp/>}/>
+            <Route path='/streams' element= {<Streams/>}/>
+            <Route path='/settings' element= {<Settings/>}/>
+            <Route path='/help&support' element= {<Helpsupport/>}/>
+            <Route path='/login' element= {<Login/>}/>
+            <Route path='/signup' element= {<SignUp/>}/>
           </Routes>
           </BrowserRouter>
         ) : (
