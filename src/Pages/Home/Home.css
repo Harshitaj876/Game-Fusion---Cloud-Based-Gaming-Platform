@@ -1,11 +1,15 @@
 .topBar{
     background-color: #2C232F;
-    width: 100vh;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .top{
     width: 100vh;
-    height: 100vh;
 }
 
 .namebox{
@@ -34,4 +38,18 @@
 
 .name{
     text-decoration: none;
+}
+
+.Icons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.logoutbutton{
+    background: none;
+    border: none;
+    color: #A28DF5;
+    font-size: 15px;
+    font-weight: bold;
 }

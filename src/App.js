@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Splash from './SplashScreen/Splash';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/Signup';
@@ -39,18 +39,20 @@ function App() {
       {isLoaded ? (
         <BrowserRouter>
           <NavBar />
-          <Routes>
-            <Route path='/' element={<Home name={userName} />} />
-            <Route path='/trending' element={<Trending />} />
-            <Route path='/gamescategory' element={<GamesCategory />} />
-            <Route path='/esports' element={<Esports />} />
-            <Route path='/downloadapp' element={<DownloadApp />} />
-            <Route path='/streams' element={<Streams />} />
-            <Route path='/settings' element={<Settings />} />
-            <Route path='/help&support' element={<Helpsupport />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/signup' element={<SignUp />} />
-          </Routes>
+          <div style={{ flex: 1 }}> 
+            <Routes>
+              <Route path='/' element={<Home name={userName} />} />
+              <Route path='/trending' element={<Trending />} />
+              <Route path='/gamescategory' element={<GamesCategory />} />
+              <Route path='/esports' element={<Esports />} />
+              <Route path='/downloadapp' element={<DownloadApp />} />
+              <Route path='/streams' element={<Streams />} />
+              <Route path='/settings' element={<Settings />} />
+              <Route path='/help&support' element={<Helpsupport />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/signup' element={<SignUp />} />
+            </Routes>
+          </div>
         </BrowserRouter>
       ) : (
         <Splash />

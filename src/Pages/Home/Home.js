@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../../Firebase';
 import '../Home/Home.css'
+import Mode from '../../Assets/Night_mode.png'
+import Notification from '../../Assets/notification.png'
 
 const Home = () => {
   const [user, setUser] = useState(null);
@@ -20,9 +22,7 @@ const Home = () => {
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
-        setUser(null); // Reset user state upon logout
-        // Redirect or perform any other actions after logout
-        // For example, you can redirect the user to the login page
+        setUser(null);
       })
       .catch((error) => {
         console.error('Error signing out: ', error);
@@ -44,7 +44,13 @@ const Home = () => {
               <h2 className='name'>Hello {user.displayName}</h2>
             )}
             <h1>Welcome Back!</h1>
-            {user && <button onClick={handleLogout}>Logout</button>}
+            
+        </div>
+
+        <div className='Icons'>
+          <img src={Mode} alt='mode'></img>
+          <img src={Notification} alt='notification'></img>
+          {user && <button onClick={handleLogout} className='logoutbutton'>Logout</button>}
         </div>
       </div>
     </div>

@@ -15,7 +15,9 @@
   flex-direction: row;
   position: relative;
   height: 100vh;
+  margin: 10px;
   gap: 20px;
+  
 }
 
 .splash {
