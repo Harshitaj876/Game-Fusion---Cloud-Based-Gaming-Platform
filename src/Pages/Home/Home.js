@@ -35,17 +35,18 @@ const Home = () => {
 
   return (
     <div>
-      <div>
-        {!user ? (
-          <h1><Link to="/login">Login</Link></h1>
-        ) : (
-          <h2>Welcome - {user.displayName}</h2>
-        )}
-        {user && <button onClick={handleLogout}>Logout</button>}
-      </div>
 
-      <br/><br/><br/>
-      {!user && <h2 className='white'>Login Please</h2>}
+      <div className='topBar'>
+        <div className='namebox'>
+          {!user ? (
+              <h2><Link to="/login" className='name'>Click here to Login</Link></h2>
+            ) : (
+              <h2 className='name'>Hello {user.displayName}</h2>
+            )}
+            <h1>Welcome Back!</h1>
+            {user && <button onClick={handleLogout}>Logout</button>}
+        </div>
+      </div>
     </div>
   );
 }
