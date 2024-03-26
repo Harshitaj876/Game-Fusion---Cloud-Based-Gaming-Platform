@@ -3,6 +3,11 @@
     width: 100vh;
 }
 
+.top{
+    width: 100vh;
+    height: 100vh;
+}
+
 .namebox{
     display: flex;
     flex-direction: column;

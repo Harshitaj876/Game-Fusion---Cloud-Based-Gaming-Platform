@@ -34,7 +34,7 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <div className='top'>
 
       <div className='topBar'>
         <div className='namebox'>
