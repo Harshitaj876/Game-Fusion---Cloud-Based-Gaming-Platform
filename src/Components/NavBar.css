@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-top: 130px;
+    margin-top: 80px;
 }
 
 .link{
@@ -30,5 +30,30 @@
     gap: 20px;
     align-items: center;
     text-decoration: none;
-    color: aliceblue;
+    font-family: "Cabin", sans-serif;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style-type: none;
+    padding: 0;
+}
+  
+nav ul li {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+  
+nav ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #B5ABAB;
+}
+  
+nav ul li a.active {
+    color: white;
+    font-weight: bold;
 }
