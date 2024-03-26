@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../../Firebase';
+import '../Home/Home.css'
 
 const Home = () => {
   const [user, setUser] = useState(null);
@@ -44,7 +45,7 @@ const Home = () => {
       </div>
 
       <br/><br/><br/>
-      {!user && <h2>Login Please</h2>}
+      {!user && <h2 className='white'>Login Please</h2>}
     </div>
   );
 }

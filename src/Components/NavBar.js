@@ -3,7 +3,6 @@ import { links } from "../data";
 import {NavLink, Link } from "react-router-dom";
 import "../Components/NavBar.css"
 import Logo from '../Assets/logo_navbar.png';
-import {FaArrowRight} from 'react-icons/fa'
 
 function NavBar() {
   return (

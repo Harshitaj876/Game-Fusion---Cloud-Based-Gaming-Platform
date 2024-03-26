@@ -8,3 +8,16 @@
   --background-color: #111111;
   --gradient-color: linear-gradient(to right, #6846EC,#B2A8DA, #BF83C9);
 }
+
+.layout{
+  display: flex;
+  flex-direction: row;
+  width: 100vh;
+  height: 100vh;
+  gap: 20px;
+}
+
+body{
+  background-color: #111111;
+  color: aliceblue;
+}

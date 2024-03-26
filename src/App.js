@@ -37,8 +37,7 @@ function App() {
 
   return (
     
-      <div>
-      
+      <div className='layout'>
         {isLoaded ? (
           <BrowserRouter>
           <NavBar/>
