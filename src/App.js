@@ -42,9 +42,9 @@ function App() {
           <NavBar />
           <div style={{ flex: 1 }}> 
             <Routes>
-              <Route path='/' element={<Home name={userName} />} />
+              <Route path='/' element={<Home name={userName}/>}></Route>
               <Route path='/game' element={<Tictactoe/>}></Route>
-              <Route path='/trending' element={<Tictactoe />} />
+              <Route path='/trending' element={<Trending />} />
               <Route path='/gamescategory' element={<GamesCategory />} />
               <Route path='/esports' element={<Esports />} />
               <Route path='/downloadapp' element={<DownloadApp />} />

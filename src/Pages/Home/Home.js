@@ -5,7 +5,6 @@ import { auth } from '../../Firebase';
 import '../Home/Home.css'
 import Mode from '../../Assets/Night_mode.png'
 import Notification from '../../Assets/notification.png'
-import tictactoe from '../../TicTacToe/tictactoe';
 
 const Home = () => {
   const [user, setUser] = useState(null);
@@ -56,7 +55,7 @@ const Home = () => {
       </div>
 
       <div>
-        <Link to="/tictactoe">
+        <Link to="/game">
           <button className="start-button">Start Game</button>
         </Link>
       </div>
