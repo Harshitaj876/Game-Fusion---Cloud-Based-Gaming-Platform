@@ -5,6 +5,7 @@ import { auth } from '../../Firebase';
 import '../Home/Home.css'
 import Mode from '../../Assets/Night_mode.png'
 import Notification from '../../Assets/notification.png'
+import tictactoe from '../../TicTacToe/tictactoe';
 
 const Home = () => {
   const [user, setUser] = useState(null);
@@ -52,6 +53,12 @@ const Home = () => {
           <img src={Notification} alt='notification'></img>
           {user && <button onClick={handleLogout} className='logoutbutton'>Logout</button>}
         </div>
+      </div>
+
+      <div>
+        <Link to="/tictactoe">
+          <button className="start-button">Start Game</button>
+        </Link>
       </div>
     </div>
   );

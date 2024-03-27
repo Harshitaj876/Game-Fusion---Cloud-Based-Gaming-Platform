@@ -12,6 +12,7 @@ import Settings from './Pages/Settings/settings';
 import Helpsupport from './Pages/Help&support/helpsupport';
 import NavBar from './Components/NavBar';
 import Home from './Pages/Home/Home';
+import Tictactoe from './TicTacToe/tictactoe';
 import './App.css';
 import { auth } from './Firebase';
 
@@ -42,7 +43,8 @@ function App() {
           <div style={{ flex: 1 }}> 
             <Routes>
               <Route path='/' element={<Home name={userName} />} />
-              <Route path='/trending' element={<Trending />} />
+              <Route path='/game' element={<Tictactoe/>}></Route>
+              <Route path='/trending' element={<Tictactoe />} />
               <Route path='/gamescategory' element={<GamesCategory />} />
               <Route path='/esports' element={<Esports />} />
               <Route path='/downloadapp' element={<DownloadApp />} />
