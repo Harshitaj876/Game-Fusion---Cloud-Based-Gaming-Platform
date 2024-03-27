@@ -72,6 +72,9 @@ const Home = () => {
             <img src={Snakes} alt=''></img>
             Snakes
           </div>
+          <Link to="/game2">
+            <button className="start-button">Start Game</button>
+          </Link>
         </div>
       </div>
       
