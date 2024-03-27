@@ -12,6 +12,9 @@
 
 .top{
     width: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .namebox{
@@ -53,4 +56,45 @@
     color: #A28DF5;
     font-size: 15px;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.Games{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Gamename img{
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Gamename{
+    width: 100vh;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    border: #A28DF5 1px solid;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+.Gamename1{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+.start-button{
+    background-color: #A28DF5;
+    color:black;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: medium;
+    cursor: pointer;
 }

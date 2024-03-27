@@ -5,6 +5,7 @@ import { auth } from '../../Firebase';
 import '../Home/Home.css'
 import Mode from '../../Assets/Night_mode.png'
 import Notification from '../../Assets/notification.png'
+import tictactoe from '../../Assets/tictactoe.png'
 
 const Home = () => {
   const [user, setUser] = useState(null);
@@ -53,12 +54,21 @@ const Home = () => {
           {user && <button onClick={handleLogout} className='logoutbutton'>Logout</button>}
         </div>
       </div>
-
-      <div>
-        <Link to="/game">
-          <button className="start-button">Start Game</button>
-        </Link>
+      
+      <div className='Games'>
+      Popular Games
+        <div className='Gamename'>
+          <div className='Gamename1'>
+            <img src={tictactoe} alt=''></img>
+            Tic Tac Toe
+          </div>
+          <Link to="/game">
+            <button className="start-button">Start Game</button>
+          </Link>
+        </div>
       </div>
+
+      
     </div>
   );
 }
