@@ -6,6 +6,7 @@ import '../Home/Home.css'
 import Mode from '../../Assets/Night_mode.png'
 import Notification from '../../Assets/notification.png'
 import tictactoe from '../../Assets/tictactoe.png'
+import Snakes from '../../Assets/snake.jpeg'
 
 const Home = () => {
   const [user, setUser] = useState(null);
@@ -66,8 +67,16 @@ const Home = () => {
             <button className="start-button">Start Game</button>
           </Link>
         </div>
+        <div className='Gamename'>
+          <div className='Gamename1'>
+            <img src={Snakes} alt=''></img>
+            Snakes
+          </div>
+          <Link to="/game2">
+            <button className="start-button">Start Game</button>
+          </Link>
+        </div>
       </div>
-
       
     </div>
   );

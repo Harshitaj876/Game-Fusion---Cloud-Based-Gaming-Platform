@@ -13,6 +13,7 @@ import Helpsupport from './Pages/Help&support/helpsupport';
 import NavBar from './Components/NavBar';
 import Home from './Pages/Home/Home';
 import Tictactoe from './TicTacToe/tictactoe';
+import SnakeGame from './Snakegame/SnakeGame';
 import './App.css';
 import { auth } from './Firebase';
 
@@ -44,6 +45,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home name={userName}/>}></Route>
               <Route path='/game' element={<Tictactoe/>}></Route>
+              <Route path='/game2' element={<SnakeGame/>}></Route>
               <Route path='/trending' element={<Trending />} />
               <Route path='/gamescategory' element={<GamesCategory />} />
               <Route path='/esports' element={<Esports />} />
