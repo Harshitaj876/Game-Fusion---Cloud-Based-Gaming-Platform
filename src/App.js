@@ -15,6 +15,7 @@ import Home from './Pages/Home/Home';
 import Tictactoe from './TicTacToe/tictactoe';
 import SnakeGame from './Snakegame/SnakeGame';
 import Tetris from './Tetris/TetrisGame'
+import Wordsearch from './WordSearch/wordsearch';
 import './App.css';
 import { auth } from './Firebase';
 
@@ -48,6 +49,7 @@ function App() {
               <Route path='/game' element={<Tictactoe/>}></Route>
               <Route path='/game2' element={<SnakeGame/>}></Route>
               <Route path='/game3' element={<Tetris/>}></Route>
+              <Route path='/game4' element={<Wordsearch/>}></Route>
               <Route path='/trending' element={<Trending />} />
               <Route path='/gamescategory' element={<GamesCategory />} />
               <Route path='/esports' element={<Esports />} />

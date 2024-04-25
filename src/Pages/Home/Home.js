@@ -17,6 +17,12 @@ import wordSearch from '../../Assets/Word search.png'
 import DeadShot from '../../Assets/deadshot.png'
 
 const Home = () => {
+
+    const handleClick = () => {
+      window.open('https://f9ccjc7drq.ap-south-1.awsapprunner.com/', '_blank'); // Open link in a new tab
+    };
+
+  
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -126,7 +132,7 @@ const Home = () => {
       <div className='Games'>
         Popular Games
         <div className='gameContentexp'>
-          <Link to="/game">
+          <Link to="/game4">
           <button className='G1'>
             <img src={wordSearch} alt=''></img>
             <div className='title'>Word Search</div>
@@ -140,12 +146,10 @@ const Home = () => {
           </button>
           </Link>
 
-          <Link to="/game2">
-          <button className='G1'>
+          <button className='G1' onClick={handleClick}>
             <img src={DeadShot} alt=''></img>
             <div className='title'>Dead Shot</div>
           </button>
-          </Link>
 
           <Link to="/game2">
           <button className='G1'>
