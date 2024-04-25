@@ -52,10 +52,20 @@ nav ul li a {
     padding: 10px;
     border-radius: 10px;
     color: #B5ABAB;
+    position: relative;
 }
   
-nav ul li a.active {
-    color: white;
-    font-weight: bold;
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
     background-color: #6846EC;
+    transition: width 0.3s ease; /* Add transition for width */
+}
+
+nav ul li a.active::after {
+    width: 100%; /* Expand width to show sliding effect */
 }
