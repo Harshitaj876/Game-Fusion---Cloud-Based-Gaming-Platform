@@ -64,6 +64,12 @@
     gap: 15px;
 }
 
+.gameContentexp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .Games{
     font-size: 20px;
     display: flex;
@@ -127,4 +133,41 @@
 .Genres{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+.gen1{
+    display: flex;
+    flex-direction: row;
+    max-width: fit-content;
+    gap: 20px;
+    background-color: #2C232F;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.rightText{
+    text-align: left;
+}
+
+.rightText h5{
+    margin: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: "Cabin", sans-serif;
+    font-weight: 100;
+}
+
+.rightText h4{
+    margin: 5px;
+    color: #B5ABAB;
+    font-size: 12px;
+    font-weight: 100;
+    font-family: "Cabin", sans-serif;
 }
