@@ -1,7 +1,6 @@
 .nav{
-    height: 100vh;
     background-color: #2C232F;
-    width: 230px;
+    max-width: fit-content;
     border-radius: 10px;
 }
 

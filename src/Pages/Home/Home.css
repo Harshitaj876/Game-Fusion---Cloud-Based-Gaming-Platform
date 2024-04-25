@@ -1,6 +1,5 @@
 .topBar{
     background-color: #2C232F;
-    width: 100%;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -11,10 +10,9 @@
 }
 
 .top{
-    width: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
 }
 
 .namebox{
@@ -42,6 +40,7 @@
 
 .name{
     text-decoration: none;
+    color: #A28DF5;
 }
 
 .Icons{
@@ -59,11 +58,17 @@
     cursor: pointer;
 }
 
+.gameContent{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
 .Games{
     font-size: 20px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .Gamename img{
@@ -74,7 +79,6 @@
 }
 
 .Gamename{
-    width: 100vh;
     padding: 10px 20px 10px 20px;
     display: flex;
     align-items: center;
@@ -97,4 +101,30 @@
     border-radius: 5px;
     font-size: medium;
     cursor: pointer;
+}
+
+.G1{
+    background-color: #2C232F;
+    max-width: fit-content;
+    border-radius: 10px;
+    border: none;
+}
+
+.G1 img{
+    margin-top: 5px;
+    cursor: pointer;
+}
+.title{
+    padding: 2px;
+    font-size: 18px;
+    margin: 5px;
+    text-align: left;
+    align-items: flex-start;
+    font-family: "Cabin", sans-serif;
+    color: #ffffff;
+}
+
+.Genres{
+    display: flex;
+    flex-direction: row;
 }

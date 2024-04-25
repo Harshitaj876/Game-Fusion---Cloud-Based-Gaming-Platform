@@ -5,8 +5,9 @@ import { auth } from '../../Firebase';
 import '../Home/Home.css'
 import Mode from '../../Assets/Night_mode.png'
 import Notification from '../../Assets/notification.png'
-import tictactoe from '../../Assets/tictactoe.png'
-import Snakes from '../../Assets/snake.jpeg'
+import Snakes from '../../Assets/snake_poster.png'
+import Tetris from '../../Assets/tetris.png'
+import TicTacToe_Poster from '../../Assets/TicTacToe_poster.png'
 
 const Home = () => {
   const [user, setUser] = useState(null);
@@ -55,27 +56,67 @@ const Home = () => {
           {user && <button onClick={handleLogout} className='logoutbutton'>Logout</button>}
         </div>
       </div>
-      
+
+      <div className='Genres'>
+          <div className='gen1'>
+
+          </div>
+      </div>
+
       <div className='Games'>
-      Popular Games
-        <div className='Gamename'>
-          <div className='Gamename1'>
-            <img src={tictactoe} alt=''></img>
-            Tic Tac Toe
-          </div>
+        Continue playing
+        <div className='gameContent'>
           <Link to="/game">
-            <button className="start-button">Start Game</button>
+          <button className='G1'>
+            <img src={TicTacToe_Poster} alt=''></img>
+            <div className='title'>Tic Tac Toe</div>
+          </button>
           </Link>
-        </div>
-        <div className='Gamename'>
-          <div className='Gamename1'>
-            <img src={Snakes} alt=''></img>
-            Snakes
-          </div>
+
           <Link to="/game2">
-            <button className="start-button">Start Game</button>
+          <button className='G1'>
+            <img src={Snakes} alt=''></img>
+            <div className='title'>Snakes</div>
+          </button>
           </Link>
         </div>
+        
+        
+      </div>
+
+      <div className='Games'>
+        Popular Games
+        <div className='gameContent'>
+          <Link to="/game">
+          <button className='G1'>
+            <img src={TicTacToe_Poster} alt=''></img>
+            <div className='title'>Tic Tac Toe</div>
+          </button>
+          </Link>
+
+          <Link to="/game2">
+          <button className='G1'>
+            <img src={Snakes} alt=''></img>
+            <div className='title'>Snakes</div>
+          </button>
+          </Link>
+
+          <Link to="/game3">
+          <button className='G1'>
+            <img src={Tetris} alt=''></img>
+            <div className='title'>Tetris</div>
+          </button>
+          </Link>
+
+          <Link to="/game">
+          <button className='G1'>
+            <img src={TicTacToe_Poster} alt=''></img>
+            <div className='title'>Tic Tac Toe</div>
+          </button>
+          </Link>
+        </div>
+        
+        
       </div>
       
     </div>
