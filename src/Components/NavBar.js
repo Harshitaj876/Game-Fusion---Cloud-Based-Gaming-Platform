@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink ,Link} from "react-router-dom";
 import "../Components/NavBar.css";
 import Logo from '../Assets/logo_navbar.png';
 import HomeInactive from '../Assets/home_inactive.png';
@@ -30,7 +30,12 @@ function NavBar() {
   return (
     <nav className="nav">
       <div className="Conatiner">
+      <Link to="/">
+        <button className="logobutton">
         <img src={Logo} alt="logo"></img>
+        </button>
+      </Link>
+        
         <ul>
           <li>
             <NavLink to="/" activeClassName="active" onClick={() => handleSetActiveLink('home')} className="link">

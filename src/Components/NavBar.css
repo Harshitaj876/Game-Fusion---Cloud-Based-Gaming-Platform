@@ -17,6 +17,12 @@
     gap: 30px;
 }
 
+.logobutton{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 .Menu2{
     display: flex;
     flex-direction: column;
