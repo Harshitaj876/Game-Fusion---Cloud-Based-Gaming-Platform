@@ -1,0 +1,33 @@
+.whole{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.head h5{
+    color: #B5ABAB;
+    font-family: "Cabin", sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    text-align: center;
+    margin: 0%;
+    max-width: 450px;
+}
+
+.head h1{
+    font-size: 20px;
+    color: #A28DF5;
+    font-family: "Cabin", sans-serif;
+    text-align: center;
+    margin: 0%;
+}
