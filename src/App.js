@@ -11,6 +11,7 @@ import Streams from './Pages/Streams/streams';
 import Settings from './Pages/Settings/settings';
 import Helpsupport from './Pages/Help&support/helpsupport';
 import NavBar from './Components/NavBar';
+import Profile from './Components/profile'
 import Home from './Pages/Home/Home';
 import Tictactoe from './TicTacToe/tictactoe';
 import SnakeGame from './Snakegame/SnakeGame';
@@ -44,6 +45,7 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <div style={{ flex: 1 }}> 
+         
             <Routes>
               <Route path='/' element={<Home name={userName}/>}></Route>
               <Route path='/game' element={<Tictactoe/>}></Route>
