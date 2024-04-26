@@ -45,7 +45,7 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <div style={{ flex: 1 }}> 
-         
+            <Profile/>
             <Routes>
               <Route path='/' element={<Home name={userName}/>}></Route>
               <Route path='/game' element={<Tictactoe/>}></Route>

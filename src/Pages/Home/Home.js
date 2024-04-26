@@ -1,10 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { auth } from '../../Firebase';
 import '../Home/Home.css'
-import Mode from '../../Assets/Night_mode.png'
-import Notification from '../../Assets/notification.png'
 import Snakes from '../../Assets/snake_poster.png'
 import Tetris from '../../Assets/tetris.png'
 import TicTacToe_Poster from '../../Assets/TicTacToe_poster.png'
@@ -22,53 +18,8 @@ const Home = () => {
       window.open('https://f9ccjc7drq.ap-south-1.awsapprunner.com/', '_blank'); // Open link in a new tab
     };
 
-  
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      setLoading(false);
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  const handleLogout = () => {
-    signOut(auth)
-      .then(() => {
-        setUser(null);
-      })
-      .catch((error) => {
-        console.error('Error signing out: ', error);
-      });
-  };
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div className='top'>
-
-      <div className='topBar'>
-        <div className='namebox'>
-          {!user ? (
-              <h2><Link to="/login" className='name'>Click here to Login</Link></h2>
-            ) : (
-              <h2 className='name'>Hello {user.displayName}</h2>
-            )}
-            <h1>Welcome Back!</h1>
-            
-        </div>
-
-        <div className='Icons'>
-          <img src={Mode} alt='mode'></img>
-          <img src={Notification} alt='notification'></img>
-          {user && <button onClick={handleLogout} className='logoutbutton'>Logout</button>}
-        </div>
-      </div>
 
       <div className='Genres'>
           <button className='gen1'>

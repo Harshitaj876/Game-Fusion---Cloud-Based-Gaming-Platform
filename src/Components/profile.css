@@ -1,0 +1,59 @@
+.topBar{
+    background-color: #2C232F;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    
+}
+
+.topv{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.namebox{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.namebox h1{
+    margin: 0px;
+    font-size: 16px;
+    font-family: "Cabin", sans-serif;
+    color: #B5ABAB;
+    font-weight: 100;
+}
+
+.namebox h2{
+    margin: 0px;
+    font-family: "Cabin", sans-serif;
+    color: #A28DF5;
+    font-size: 18px;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.name{
+    text-decoration: none;
+    color: #A28DF5;
+}
+
+.Icons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.logoutbutton{
+    background: none;
+    border: none;
+    color: #A28DF5;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -144,5 +144,6 @@ input[type=email], select {
 }
 
 .errormsg{
-    color: #fff;
+    color: #A28DF5;
+    font-weight: 100;
 }
