@@ -31,3 +31,42 @@
     text-align: center;
     margin: 0%;
 }
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bottom h5{
+    color: #A28DF5;
+    font-family: "Cabin", sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+    text-align: center;
+    margin: 0%;
+}
+
+.horizontal-line {
+    height: 1px;
+    background-color: #767676;
+    margin: 0 10px; /* Adjust the margin as needed */
+}
+
+.btitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bottomicons{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.bottomicons img{
+    cursor: pointer;
+}
