@@ -1,8 +1,9 @@
 import React from 'react'
+import '../Games Category/gamescategory'
 
 const gamescategory = () => {
   return (
-    <div>gamescategory</div>
+    <div className='wholeg'>gamescategory</div>
   )
 }
 

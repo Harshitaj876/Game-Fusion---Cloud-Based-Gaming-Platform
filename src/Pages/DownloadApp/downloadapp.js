@@ -7,7 +7,7 @@ import appStore from '../../Assets/appstore.png'
 const downloadapp = () => {
 
   const handleClick = (link) => {
-    window.open(link, '_blank'); // Open link in a new tab
+    window.open(link, '_blank'); 
   };
 
   return (

@@ -1,0 +1,62 @@
+.wholet {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wholet h1{
+    font-family: "Cabin", sans-serif;
+    font-size: large;
+    color:  #A28DF5;
+}
+
+.newsBlock{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border: 1px solid  #A28DF5 ;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.newstitles{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newstitles h2{
+    color: #A28DF5;
+    font-size: 18px;
+    font-weight: 200;
+    margin: 0;
+    font-family: "Cabin", sans-serif;
+}
+
+.newstitles h3{
+    color:  #B5ABAB;
+    font-size: 15px;
+    font-weight: 200;
+    margin: 0;
+    font-family: "Cabin", sans-serif;
+}
+
+.newstitles h4{
+    color:   #A28DF5;
+    font-size: 12px;
+    font-weight: 200;
+    margin: 0;
+    font-family: "Cabin", sans-serif;
+    cursor: pointer;
+}
+
+.scrolldiv{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 552px;
+    overflow: auto;
+}
