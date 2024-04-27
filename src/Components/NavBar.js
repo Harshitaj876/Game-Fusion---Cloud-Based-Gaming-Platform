@@ -53,18 +53,8 @@ function NavBar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/esports" activeClassName="active" onClick={() => handleSetActiveLink('Esports')} className="link">
-              <span><img src={activeLink === 'Esports' ? EsportsActive : EsportsInactive} alt=""></img></span>Esports
-            </NavLink>
-          </li>
-          <li>
             <NavLink to="/downloadapp" activeClassName="active" onClick={() => handleSetActiveLink('DownloadApp')} className="link">
               <span><img src={activeLink === 'DownloadApp' ? DownloadActive : DownloadInactive} alt=""></img></span>Download App
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/streams" activeClassName="active" onClick={() => handleSetActiveLink('Streams')} className="link">
-              <span><img src={activeLink === 'Streams' ? StreamsActive : StreamsInactive} alt=""></img></span>Streams
             </NavLink>
           </li>
         </ul>
