@@ -5,7 +5,14 @@
     gap: 20px;
 }
 
-.G1 img{
+.G11{
+    background-color: #2C232F;
+    max-width: fit-content;
+    border-radius: 10px;
+    border: none;
+}
+
+.G11 img{
     width: 200px;
     height: 250px;
 }

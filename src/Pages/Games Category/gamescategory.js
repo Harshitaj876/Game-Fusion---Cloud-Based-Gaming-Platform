@@ -13,22 +13,22 @@ const gamescategory = () => {
     <div className='games'>
 
       <div className='row1'> 
-        <button className='G1'>
+        <button className='G11'>
           <img src={poker} alt=''></img>
             <div className='titleghj'>Poker</div>
         </button>
 
-        <button className='G1'>
+        <button className='G11'>
           <img src={games} alt=''></img>
             <div className='titleghj'>Games</div>
         </button>
 
-        <button className='G1'>
+        <button className='G11'>
           <img src={jackpot} alt=''></img>
             <div className='titleghj'>Jackpot</div>
         </button>
 
-        <button className='G1'>
+        <button className='G11'>
           <img src={Action} alt=''></img>
             <div className='titleghj'>Action</div>
         </button>
@@ -36,17 +36,17 @@ const gamescategory = () => {
       </div>
 
       <div className='row2'> 
-        <button className='G1'>
+        <button className='G11'>
           <img src={crypto} alt=''></img>
             <div className='titleghj'>Crypto</div>
         </button>
 
-        <button className='G1'>
+        <button className='G11'>
           <img src={puzzle} alt=''></img>
             <div className='titleghj'>Puzzle</div>
         </button>
 
-        <button className='G1'>
+        <button className='G11'>
           <img src={multi} alt=''></img>
             <div className='titleghj'>Multiplayer</div>
         </button>
